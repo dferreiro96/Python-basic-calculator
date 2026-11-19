@@ -1,18 +1,21 @@
 import pytest
 
-from logica import sumar, restar, multiplicar, dividir
+from logica import dividir, multiplicar, restar, sumar
 
-def test_probar_suma_positivos():
-    assert sumar (2, 3) == 5
-    
-def test_probar_suma_negativos():
-    assert sumar (-2, -3) == -5
-    
-def test_probar_suma_mixta():
-    assert sumar (-2, 3) == 1
 
-def test_sumar_cero():
-    assert sumar (2, 0) == 2
+@pytest.mark.parametrize("num, num2, resultado", [
+    (2, 3, 5),
+    (2, -3, -1),
+    (-2, -3, -5), 
+    (2, 0, 2), 
+    (-2, 0, -2)
+    ])
+    
+    
+def test_probar_suma_parametrizada(num, num2, resultado):
+    assert sumar (num, num2) == resultado
+    
+    
     
 def test_probar_resta_positivos():
     assert restar (2, 3) == -1
