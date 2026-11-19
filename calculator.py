@@ -2,39 +2,25 @@
 while True:
     
      operacion= input("\n¿Qué operación desea realizar? Introduzca '+' para suma; '-' para resta, '*' para multiplicación o '/' para división: ").lower() .strip()
-     num1= float(input("Introduzca el primer número: "))
-     num2= float(input("Introduzca el segundo número: "))
+     num1= float(input("\nIntroduzca el primer número: "))
+     num2= float(input("\nIntroduzca el segundo número: "))
 
-     s= num1+num2
-     r= num1-num2
-     m= num1*num2
 
-     def sumar(num1, num2):
-          return num1 + num2
-
-     def restar(num1, num2):
-          return num1 - num2
-     
-     def multiplicar(num1, num2):
-          return num1 * num2
-
-     def dividir(num1, num2):
-          return num1/num2
+    
      
      if operacion =="+":
-     print(f"La suma de los dos números es: {s}")
-     elif operacion== "-":
-          print(f"La resta de los dos números es: {r}")
+          print(f"\nLa suma es: {sumar(num1, num2)}")
+     elif operacion== "-":   
+          print(f"\nLa resta es: {restar(num1, num2)}")
      elif operacion == "*":
-          print(f"La multiplicación de los dos números es: {m}")
+          print(f"\nLa multiplicación es: {multiplicar(num1, num2)}")
      elif operacion =="/" and num2==0:
-          print("La división por cero no está permitida")
+          print("\nLa división por cero no está permitida")
      elif operacion== "/" and num2!= 0:
-          d= num1/num2
-          print(f"La división de los dos números es: {d}")
+          print(f"\nLa división es: {dividir(num1, num2)}")
      else:
-     print("No válido")
+          print("No válido")
      continuar= input("¿Desea hacer otro cálculo (s/n)?: ")
      if continuar != "s":
-     print("Hasta luego. ")
+          print("Hasta luego. ")
      break 
