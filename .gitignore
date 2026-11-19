@@ -5,7 +5,7 @@ __pycache__/
 
 # Caches de Pytest
 .pytest_cache/
-
+.coverage
 # Entornos virtuales (por si acaso usas uno más adelante)
 venv/
 env/
